@@ -4,21 +4,26 @@ class DictionariesController < ApplicationController
   end
 
   def new
-    @dictionaries = Dictionary.new
+    @dictionary = Dictionary.new
   end
 
   def create
-    Dictionary.create(dictionary_params)
+    dictionary = Dictionary.new(dictionary_params)
+    if dictionary.save
+      redirect_to root_path
+    end
   end
 
   def destroy
     dictionary = Dictionary.find(params[:id])
-    dictionary.destroy
+    if dictionary.destroy
+      redirect_to root_path
+    end
   end
 
-private
+  private
 
-  def dictionary_params
-    params.require(:dictionary).permit(:word,:mean)
-  end
+    def dictionary_params
+      params.require(:dictionary).permit(:word,:mean)
+    end
 end
