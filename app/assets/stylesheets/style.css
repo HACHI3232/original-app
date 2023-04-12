@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body {
+	background-color: #abf3e6;
+}
+
+/* ヘッダー */
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+header div {
+	/* display: inline-block; */
+	margin-left: 120px;
+	padding: 8px 0;
+}
+
+header span img {
+	margin-left: 16px;
+	vertical-align: super;
+}
+
+header div i {
+	font-size: 40px;
+}
+
+header .menu-icon {
+	margin-right: 64px;
+	cursor: pointer;
+}
