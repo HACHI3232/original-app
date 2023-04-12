@@ -17,5 +17,14 @@
       <i class="fa-solid fa-bars"></i>
     </div>
   </header>
+  <div class="contents">
+    <div class="content_btn">
+      <a href="/dictionaries/new" class="btn03 pushdown"><span>単語を登録する</span></a>
+      <a href="/dictionaries/new" class="btn03 pushdown"><span>辞書を登録する</span></a>
+    </div>
+    <div class="card-wrapper">
+      <%= render partial:"word",collection:@dictionaries %>
+    </div>
+  </div>
 </body>
 </html>

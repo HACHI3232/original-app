@@ -1,0 +1,10 @@
+<% @dictionaries.each do |dictionary| %>
+  <div class="card">
+    <div class="card__words">
+      <%= dictionary.word %>
+    </div>
+    <div class="card__means">
+      <%= dictionary.mean %>
+    </div>
+  </div>
+<% end %>
